@@ -1,0 +1,9 @@
+{
+  "components": [
+    {
+      "name": "Button",
+      "path": "src/components/ui/button.tsx",
+      "description": "A reusable button component styled with Tailwind CSS."
+    }
+  ]
+}

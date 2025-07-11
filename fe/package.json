@@ -1,0 +1,24 @@
+{
+  "name": "nextjs-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "next": "15.0.0",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "tailwindcss": "4.0.0",
+    "shadcn/ui": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "5.0.0",
+    "eslint": "8.0.0",
+    "eslint-config-next": "15.0.0",
+    "postcss": "8.0.0"
+  }
+}
