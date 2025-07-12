@@ -1,0 +1,67 @@
+[
+  {
+    "id": "intro-to-mcp",
+    "title": "Introduction to Model Context Protocol",
+    "description": "Learn the fundamentals of MCP and how it enables AI models to access external data sources securely.",
+    "category": "basics",
+    "difficulty": "beginner",
+    "estimatedTime": "15 min",
+    "tags": ["mcp", "introduction", "basics"],
+    "content": {
+      "sections": [
+        {
+          "title": "What is MCP?",
+          "content": "Model Context Protocol (MCP) is a standard that enables AI models to securely connect to external data sources and tools.",
+          "codeExample": null
+        },
+        {
+          "title": "Key Benefits",
+          "content": "MCP provides secure data access, standardized interfaces, and improved AI model capabilities.",
+          "codeExample": "// Example MCP client initialization\nconst client = new MCPClient({\n  serverUrl: 'https://api.example.com/mcp',\n  apiKey: process.env.MCP_API_KEY\n});"
+        }
+      ]
+    },
+    "prerequisites": [],
+    "nextSteps": ["server-setup", "client-integration"]
+  },
+  {
+    "id": "server-setup",
+    "title": "Setting Up an MCP Server",
+    "description": "Step-by-step guide to creating and configuring your first MCP server.",
+    "category": "implementation",
+    "difficulty": "intermediate",
+    "estimatedTime": "30 min",
+    "tags": ["server", "setup", "configuration"],
+    "content": {
+      "sections": [
+        {
+          "title": "Server Configuration",
+          "content": "Configure your MCP server with proper authentication and data source connections.",
+          "codeExample": "import { MCPServer } from '@mcp/server';\n\nconst server = new MCPServer({\n  port: 3000,\n  auth: {\n    type: 'bearer',\n    secret: process.env.SERVER_SECRET\n  }\n});"
+        }
+      ]
+    },
+    "prerequisites": ["intro-to-mcp"],
+    "nextSteps": ["client-integration", "advanced-features"]
+  },
+  {
+    "id": "client-integration",
+    "title": "Client Integration Patterns",
+    "description": "Learn how to integrate MCP clients into your applications effectively.",
+    "category": "implementation",
+    "difficulty": "intermediate",
+    "estimatedTime": "25 min",
+    "tags": ["client", "integration", "patterns"],
+    "content": {
+      "sections": [
+        {
+          "title": "Client Setup",
+          "content": "Initialize and configure MCP clients for different use cases.",
+          "codeExample": "const client = await MCPClient.connect({\n  serverUrl: 'wss://mcp.example.com',\n  protocols: ['mcp-v1']\n});\n\nconst result = await client.query({\n  source: 'database',\n  query: 'SELECT * FROM users'\n});"
+        }
+      ]
+    },
+    "prerequisites": ["intro-to-mcp"],
+    "nextSteps": ["advanced-features"]
+  }
+]
